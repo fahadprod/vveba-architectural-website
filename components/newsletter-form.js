@@ -1,4 +1,4 @@
-export default function ContactUs(){
+export default function NewsletterForm(){
     return(
         <section className="contact">
             <div className="contact-content">
