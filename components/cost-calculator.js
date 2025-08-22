@@ -1,5 +1,3 @@
-
-
 import { useState } from 'react';
 
 export default function CostCalculator() {
@@ -17,17 +15,17 @@ export default function CostCalculator() {
   };
 
   return (
-    <section className="calculator-section">
-      <div className="calculator-container">
-        <h2 className="calculator-title">BUILDING COST ESTIMATOR</h2>
-        <p className="calculator-description">
+    <section className="cost-calculator-section">
+      <div className="cost-calculator-container">
+        <h2 className="cost-calculator-title">BUILDING COST ESTIMATOR</h2>
+        <p className="cost-calculator-description">
           Get an instant estimate for your construction project based on your requirements
         </p>
 
-        <div className="calculator-form">
-          <div className="form-group">
-            <label htmlFor="size" className="form-label">
-              Floor Area (sq ft): <span className="value-display">{inputs.size}</span>
+        <div className="cost-calculator-form">
+          <div className="cost-form-group">
+            <label htmlFor="size" className="cost-form-label">
+              Floor Area (sq ft): <span className="cost-value-display">{inputs.size}</span>
             </label>
             <input
               type="range"
@@ -37,22 +35,22 @@ export default function CostCalculator() {
               step="100"
               value={inputs.size}
               onChange={(e) => setInputs({...inputs, size: e.target.value})}
-              className="form-range"
+              className="cost-form-range"
             />
-            <div className="range-labels">
+            <div className="cost-range-labels">
               <span>500</span>
               <span>5000</span>
             </div>
           </div>
 
-          <div className="form-group">
-            <label htmlFor="floors" className="form-label">Number of Floors</label>
-            <div className="floor-options">
+          <div className="cost-form-group">
+            <label htmlFor="floors" className="cost-form-label">Number of Floors</label>
+            <div className="cost-floor-options">
               {[1, 2, 3].map(floor => (
                 <button
                   key={floor}
                   type="button"
-                  className={`floor-option ${inputs.floors === floor ? 'active' : ''}`}
+                  className={`cost-floor-option ${inputs.floors === floor ? 'cost-active' : ''}`}
                   onClick={() => setInputs({...inputs, floors: floor})}
                 >
                   {floor}
@@ -61,23 +59,23 @@ export default function CostCalculator() {
             </div>
           </div>
 
-          <div className="form-group">
-            <label htmlFor="materials" className="form-label">Material Quality</label>
+          <div className="cost-form-group">
+            <label htmlFor="materials" className="cost-form-label">Material Quality</label>
             <select
               id="materials"
               value={inputs.materials}
               onChange={(e) => setInputs({...inputs, materials: e.target.value})}
-              className="form-select"
+              className="cost-form-select"
             >
               <option value="standard">Standard Materials ($150/sq ft)</option>
               <option value="premium">Premium Materials ($200/sq ft)</option>
             </select>
           </div>
 
-          <div className="form-group">
-            <label htmlFor="location" className="form-label">Location</label>
-            <div className="location-options">
-              <label className="location-option">
+          <div className="cost-form-group">
+            <label htmlFor="location" className="cost-form-label">Location</label>
+            <div className="cost-location-options">
+              <label className="cost-location-option">
                 <input
                   type="radio"
                   name="location"
@@ -87,7 +85,7 @@ export default function CostCalculator() {
                 />
                 <span>Urban (+20%)</span>
               </label>
-              <label className="location-option">
+              <label className="cost-location-option">
                 <input
                   type="radio"
                   name="location"
@@ -100,10 +98,10 @@ export default function CostCalculator() {
             </div>
           </div>
 
-          <div className="estimate-result">
+          <div className="cost-estimate-result">
             <h3>Estimated Construction Cost</h3>
-            <div className="estimate-amount">${calculateCost()}</div>
-            <p className="estimate-note">This is an approximate estimate based on current market rates</p>
+            <div className="cost-estimate-amount">${calculateCost()}</div>
+            <p className="cost-estimate-note">This is an approximate estimate based on current market rates</p>
           </div>
         </div>
       </div>

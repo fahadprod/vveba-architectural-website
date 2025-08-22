@@ -791,12 +791,13 @@ html {
 /* cost calculator */
 
 /* Calculator Section */
-.calculator-section {
+/* Cost Calculator Section */
+.cost-calculator-section {
   padding: 4rem 2rem;
   background-color: #313133;
 }
 
-.calculator-container {
+.cost-calculator-container {
   max-width: 800px;
   margin: 0 auto;
   background: white;
@@ -806,7 +807,7 @@ html {
 }
 
 /* Title Styles */
-.calculator-title {
+.cost-calculator-title {
   font-size: 4rem;
   font-weight: 700;
   color: #222;
@@ -814,7 +815,7 @@ html {
   text-align: center;
 }
 
-.calculator-description {
+.cost-calculator-description {
   font-size: 1.8rem;
   color: #555;
   text-align: center;
@@ -823,16 +824,16 @@ html {
 }
 
 /* Form Styles */
-.calculator-form {
+.cost-calculator-form {
   display: grid;
   gap: 2rem;
 }
 
-.form-group {
+.cost-calculator-form .cost-form-group {
   margin-bottom: 1.5rem;
 }
 
-.form-label {
+.cost-calculator-form .cost-form-label {
   display: block;
   font-weight: 600;
   font-size: 1.9rem;
@@ -840,14 +841,14 @@ html {
   color: #333;
 }
 
-.value-display {
+.cost-value-display {
   float: right;
   color: #DBA81B;
   font-weight: 700;
 }
 
 /* Range Input */
-.form-range {
+.cost-calculator-form .cost-form-range {
   width: 100%;
   height: 8px;
   -webkit-appearance: none;
@@ -857,7 +858,7 @@ html {
   margin-bottom: 0.5rem;
 }
 
-.form-range::-webkit-slider-thumb {
+.cost-calculator-form .cost-form-range::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 20px;
   height: 20px;
@@ -866,7 +867,7 @@ html {
   cursor: pointer;
 }
 
-.range-labels {
+.cost-range-labels {
   display: flex;
   justify-content: space-between;
   font-size: 1.8rem;
@@ -874,12 +875,12 @@ html {
 }
 
 /* Floor Options */
-.floor-options {
+.cost-floor-options {
   display: flex;
   gap: 0.5rem;
 }
 
-.floor-option {
+.cost-floor-option {
   flex: 1;
   padding: 0.75rem;
   text-align: center;
@@ -888,19 +889,20 @@ html {
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.2s;
+  font-size: 1.6rem;
 }
 
-.floor-option:hover {
+.cost-floor-option:hover {
   background: #e0e0e0;
 }
 
-.floor-option.active {
+.cost-floor-option.cost-active {
   background: #DBA81B;
   color: white;
 }
 
 /* Select Input */
-.form-select {
+.cost-form-select {
   width: 100%;
   padding: 0.75rem;
   border: 1px solid #ddd;
@@ -910,12 +912,12 @@ html {
 }
 
 /* Location Options */
-.location-options {
+.cost-location-options {
   display: flex;
   gap: 1rem;
 }
 
-.location-option {
+.cost-location-option {
   flex: 1;
   padding: 0.75rem;
   background: #f5f5f5;
@@ -927,12 +929,12 @@ html {
   font-size: 1.8rem;
 }
 
-.location-option input {
+.cost-location-option input {
   margin-right: 0.5rem;
 }
 
 /* Estimate Result */
-.estimate-result {
+.cost-estimate-result {
   background: rgba(58, 134, 255, 0.1);
   padding: 1.5rem;
   border-radius: 8px;
@@ -940,43 +942,53 @@ html {
   margin-top: 1rem;
 }
 
-.estimate-result h3 {
+.cost-estimate-result h3 {
   font-size: 2.2rem;
   margin-bottom: 0.5rem;
   color: #333;
 }
 
-.estimate-amount {
+.cost-estimate-amount {
   font-size: 2.8rem;
   font-weight: 700;
   color: #DBA81B;
   margin: 1rem 0;
 }
 
-.estimate-note {
+.cost-estimate-note {
   font-size: 1.9rem;
   color: #666;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .calculator-title {
-    font-size: 1.5rem;
+  .cost-calculator-title {
+    font-size: 2.5rem;
   }
   
-  .calculator-description {
-    font-size: 1rem;
+  .cost-calculator-description {
+    font-size: 1.4rem;
   }
   
-  .location-options {
+  .cost-location-options {
     flex-direction: column;
   }
   
-  .estimate-amount {
+  .cost-estimate-amount {
     font-size: 2rem;
+  }
+  
+  .cost-form-label {
+    font-size: 1.6rem;
+  }
+  
+  .cost-floor-option {
+    font-size: 1.4rem;
+    padding: 0.5rem;
   }
 }
 
+/* cost calculator end */
 /* cost calculator end */
 
 
